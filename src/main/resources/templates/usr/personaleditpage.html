@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>show personal edit page</title>
+</head>
+<body>
+
+<form th:action="@{/appLogout}" method="POST">
+    <input type="submit" value="Logout"/>
+</form>
+
+<h1>Personal edit page</h1>
+<p>
+<p th:text="'ID: ' + ${person.getId()}">DATA</p>
+<p th:text="'Name: ' + ${person.getName()}">DATA</p>
+<p th:text="'Height: ' + ${person.getHeight()}">DATA</p>
+<p>
+    <a th:href="@{/admin/edituser?id={id}(id=${person.getId()})}">Edit user</a>
+<p>
+
+
+</body>
+</html>

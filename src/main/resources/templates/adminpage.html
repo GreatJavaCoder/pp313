@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title of adminpage</title>
+</head>
+<body>
+
+<form th:action="@{/appLogout}" method="POST">
+    <input type="submit" value="Logout"/>
+</form>
+
+<h1>hello i'm adminpage</h1>
+
+    <a href="/admin/create">create user</a>
+<p> <a href="/admin/read">read user</a>
+<p> <a href="/admin/update">update user</a>
+<p> <a href="/admin/delete">delete user</a>
+<p> <a href="/user">admin as user</a>
+<p>
+
+</body>
+</html>

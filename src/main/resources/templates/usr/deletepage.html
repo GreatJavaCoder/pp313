@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>read all users</title>
+</head>
+<body>
+
+<form th:action="@{/appLogout}" method="POST">
+    <input type="submit" value="Logout"/>
+</form>
+
+<H1>Users to delete list</H1>
+<h2>Select user:</h2>
+<p>
+<div th:each="user : ${users}">
+    <a th:href="@{/admin/personaldeletepage?id={id}(id=${user.getId()})}" th:text="${user.getId()} + ' ' + ${user.getName()}">DATA</a>
+</div>
+
+</body>
+</html>
